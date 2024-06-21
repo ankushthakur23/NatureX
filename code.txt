@@ -1,0 +1,558 @@
+Achievements and leaderboard section
+
+
+
+<section class="leaderboard">
+        <div class="header">
+            <h1>Leaderboard and Achievements</h1>
+        </div>
+        <div class="content">
+            <div class="individual-leaderboard">
+                <h2>Top Individuals</h2>
+                <ul>
+                    <li>
+                        <span class="rank">1</span>
+                        <span class="name">Amit Sharma</span>
+                        <span class="points">1200 Points</span>
+                    </li>
+                    <li>
+                        <span class="rank">2</span>
+                        <span class="name">Neha Verma</span>
+                        <span class="points">1150 Points</span>
+                    </li>
+                    <li>
+                        <span class="rank">3</span>
+                        <span class="name">Raj Patel</span>
+                        <span class="points">1100 Points</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="city-leaderboard">
+                <h2>Top Cities</h2>
+                <ul>
+                    <li>
+                        <span class="rank">1</span>
+                        <span class="name">Mumbai</span>
+                        <span class="points">5000 Points</span>
+                    </li>
+                    <li>
+                        <span class="rank">2</span>
+                        <span class="name">Delhi</span>
+                        <span class="points">4800 Points</span>
+                    </li>
+                    <li>
+                        <span class="rank">3</span>
+                        <span class="name">Bangalore</span>
+                        <span class="points">4600 Points</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="achievements">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>
+                        <span class="badge">🏆</span>
+                        <span class="description">Top Contributor - Amit Sharma</span>
+                    </li>
+                    <li>
+                        <span class="badge">🥇</span>
+                        <span class="description">Most Active City - Mumbai</span>
+                    </li>
+                    <li>
+                        <span class="badge">⭐</span>
+                        <span class="description">Rising Star - Neha Verma</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+ 
+
+
+
+    *****************css*******************
+
+
+    /* Leaderboard Styles */
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.content > div {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.rank {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.name {
+    flex: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.points {
+    font-size: 1em;
+}
+
+.badge {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.description {
+    flex: 1;
+    text-align: left;
+}
+
+.achievements ul li {
+    justify-content: flex-start;
+}
+
+
+
+responsiveness but not working problem
+
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Leaderboard Styles */
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.content > div {
+    flex: 1;
+    margin: 10px;
+    min-width: 300px;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.ulComman {
+    list-style: none;
+}
+
+.liComman {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.rank {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.name {
+    flex: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.points {
+    font-size: 1em;
+}
+
+.badge {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.description {
+    flex: 1;
+    text-align: left;
+}
+
+.achievements ul li {
+    justify-content: flex-start;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content > div {
+        margin: 10px 0;
+    }
+
+    .content h2 {
+        font-size: 1.5em;
+    }
+
+    .liComman {
+        flex-direction: column;
+        text-align: left;
+        padding: 15px;
+    }
+
+    .rank, .points, .badge {
+        font-size: 1em;
+    }
+
+    .name, .description {
+        margin-left: 0;
+    }
+}
+
+
+
+
+
+
+/// best working version html and css for now
+
+
+
+/* Leaderboard Styles */
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+  }
+  
+  .content > div {
+    flex: 1 1 300px;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .ulComman {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .liComman {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .liComman:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+  }
+  
+  .rank {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 1rem;
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .name {
+    flex: 1;
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .points {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .badge {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+  
+  .description {
+    flex: 1;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  
+  .achievements ul li {
+    justify-content: flex-start;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .content > div {
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header h1 {
+      font-size: 2rem;
+    }
+  
+    .content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .liComman {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  
+    .rank,
+    .name,
+    .points {
+      margin: 0.5rem;
+    }
+  
+    .avatar {
+      margin: 0;
+    }
+  
+    .badge {
+      font-size: 1.5rem;
+    }
+  }
+
+
+
+
+html
+
+<section class="leaderboard">
+  <div class="header">
+    <h1>Hall of Fame</h1>
+  </div>
+  <div class="content">
+    <div class="individual-leaderboard">
+      <h2>Top Contributors</h2>
+      <ol class="ulComman">
+        <li class="liComman">
+          <span class="rank">1</span>
+          <div class="avatar">
+            <img src="https://via.placeholder.com/50" alt="Avatar">
+          </div>
+          <span class="name">Amit Sharma</span>
+          <span class="points">1200 Points</span>
+        </li>
+        <li class="liComman">
+          <span class="rank">2</span>
+          <div class="avatar">
+            <img src="https://via.placeholder.com/50" alt="Avatar">
+          </div>
+          <span class="name">Neha Verma</span>
+          <span class="points">1150 Points</span>
+        </li>
+        <li class="liComman">
+          <span class="rank">3</span>
+          <div class="avatar">
+            <img src="https://via.placeholder.com/50" alt="Avatar">
+          </div>
+          <span class="name">Raj Patel</span>
+          <span class="points">1100 Points</span>
+        </li>
+      </ol>
+    </div>
+    <div class="city-leaderboard">
+      <h2>Top Cities</h2>
+      <ol class="ulComman">
+        <li class="liComman">
+          <span class="rank">1</span>
+          <span class="name">Mumbai</span>
+          <span class="points">5000 Points</span>
+        </li>
+        <li class="liComman">
+          <span class="rank">2</span>
+          <span class="name">Delhi</span>
+          <span class="points">4800 Points</span>
+        </li>
+        <li class="liComman">
+          <span class="rank">3</span>
+          <span class="name">Bangalore</span>
+          <span class="points">4600 Points</span>
+        </li>
+      </ol>
+    </div>
+    <div class="achievements">
+      <h2>Achievements</h2>
+      <ul class="ulComman">
+        <li class="liComman">
+          <span class="badge">🏆</span>
+          <span class="description">Top Contributor - Amit Sharma</span>
+        </li>
+        <li class="liComman">
+          <span class="badge">🥇</span>
+          <span class="description">Most Active City - Mumbai</span>
+        </li>
+        <li class="liComman">
+          <span class="badge">⭐</span>
+          <span class="description">Rising Star - Neha Verma</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+?????????????????????????????????????????
+
+
+
+
+
+
+
+
+
+
+
+
