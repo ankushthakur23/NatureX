@@ -594,7 +594,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #00b341, #258803);
+  background-image: url(./images/lavendar.jpg);
   color: #fff;
   text-align: center;
   padding: 2rem;
@@ -762,3 +762,5 @@ body {
   font-size: 3em;
   margin: 0;
 }
+
+

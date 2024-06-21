@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Nature Enthusiast - User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://source.unsplash.com/1600x900/?nature,india");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            margin: 0;
+            color: #4CAF50;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        section {
+            background-color: rgba(249, 249, 249, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        section h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        form input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .goal {
+            margin-bottom: 10px;
+        }
+        .goal h3 {
+            margin: 0;
+        }
+        .progress-bar {
+            background-color: #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .progress {
+            background-color: #4CAF50;
+            height: 20px;
+        }
+        #activity-log ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #activity-log li {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        #profile-image-section {
+            text-align: center;
+        }
+        #profile-image {
+            display: inline-block;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            background-position: center;
+            background-size: cover;
+        }
+        #upload-image-input {
+            display: none;
+        }
+        #upload-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #profile-image{
+            background-image: url("https://source.unsplash.com/100x100/?portrait,indian");
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <header>
+            <h1>Indian Nature Enthusiast</h1>
+        </header> -->
+        <main>
+            <section id="profile-image-section">
+                <h2>Profile Image</h2>
+                <div id="profile-image"></div>
+                <input type="file" id="upload-image-input" accept="image/*">
+                <label for="upload-image-input" id="upload-button">Upload Image</label>
+            </section>
+            <section id="user-info">
+                <h2>User Information</h2>
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="NatureLoverIndia">
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="Ravi Kumar">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="ravi.kumar@example.com">
+                    
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" value="+91 9876543210">
+                    
+                    <button type="submit">Save Changes</button>
+                </form>
+            </section>
+            
+            <section id="sustainability-goals">
+                <h2>Sustainability Goals</h2>
+                <div class="goal">
+                    <h3>Trees Planted</h3>
+                    <p>Goal: 100</p>
+                    <p>Achieved: 75</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="goal">
+                    <h3>Waste Recycled (kg)</h3>
+                    <p>Goal: 500</p>
+                    <p>Achieved: 350</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="activity-log">
+                <h2>Activity Log</h2>
+                <ul>
+                    <li>
+                        <span class="date">2024-06-20</span>
+                        <span class="activity">Planted 5 Neem trees</span>
+                    </li>
+                    <li>
+                        <span class="date">2024-06-18</span>
+                        <span class="activity">Recycled 10kg of plastic</span>
+                    </li>
+                    <li>
+                        <span class="date">2024-06-15</span>
+                        <span class="activity">Attended wildlife conservation workshop in Bandipur</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script>
+        const uploadButton = document.getElementById('upload-button');
+        const uploadInput = document.getElementById('upload-image-input');
+        const profileImage = document.getElementById('profile-image');
+
+        uploadInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profileImage.style.backgroundImage = `url(${e.target.result})`;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
